@@ -1,0 +1,3 @@
+# Ignore Playwright report and test results
+playwright-report/
+test-results/
