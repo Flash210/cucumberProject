@@ -8,7 +8,7 @@ export class PracticeFormPage {
   private mobileInput: Locator;
   private submitButton: Locator;
   private modal: Locator;
-  private validationError: Locator;
+  private invalidInputs: Locator;
 
   constructor(page: Page) {
     this.page = page;
@@ -18,7 +18,7 @@ export class PracticeFormPage {
     this.mobileInput = page.locator('#userNumber');
     this.submitButton = page.locator('#submit');
     this.modal = page.locator('.modal-content');
-    this.validationError = page.locator('.field-error'); // Adjust based on actual validation class
+    this.invalidInputs = page.locator('input:invalid');
   }
 
   async navigate() {
@@ -45,6 +45,7 @@ export class PracticeFormPage {
   }
 
   async hasValidationErrors() {
-    return await this.validationError.isVisible();
+    // Check if any input is invalid
+    return await this.invalidInputs.count() > 0;
   }
 }

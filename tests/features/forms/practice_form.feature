@@ -1,3 +1,5 @@
+Feature: Practice Form Submission
+
 Scenario: Form submission with valid data
   Given I navigate to the practice form
   When I fill in the form with:

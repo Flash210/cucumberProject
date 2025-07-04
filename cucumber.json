@@ -10,6 +10,7 @@
             "tests/features/**/*.feature"
         ],
         "require": [
+            "tests/support/world.ts",
             "tests/steps/**/*.ts"
         ],
         "requireModule": [
