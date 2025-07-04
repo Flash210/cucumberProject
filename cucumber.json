@@ -1,5 +1,7 @@
 {
     "default": {
+        "headless": false,
+        "timeout": 60000,
         "dryRun": false,
         "formatOptions": {
             "snippetInterface": "async-await"
